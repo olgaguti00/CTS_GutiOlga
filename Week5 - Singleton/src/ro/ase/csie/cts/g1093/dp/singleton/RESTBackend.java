@@ -23,7 +23,7 @@ public class RESTBackend {
 		System.out.println("Send GET command to " + this.url);
 	}
 
-	//lazy-instantiation example
+	// lazy-instantiation example
 	public static synchronized RESTBackend getRESTBackend() {
 		if (theBackend == null) {
 			// get the backend data from a config/settings file
@@ -34,4 +34,12 @@ public class RESTBackend {
 
 		return theBackend;
 	}
+
+//	public static synchronized RESTBackend getRESTBackend(String url, String data) {
+//		if (theBackend == null) {
+//			theBackend = new RESTBackend(url, data);
+//		}
+//
+//		return theBackend;
+//	}
 }
